@@ -1,5 +1,6 @@
-import Head from "next/head"; // Importa Head de next/head
+import Head from "next/head";
 import Footer from "./_components/molecules/Footer.jsx";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./_styles/globals.css";
 
 export const metadata = {
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <Footer />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

@@ -49,7 +49,6 @@ export default async function Home({ searchParams }) {
 
   const initialProperties = await getProperties(searchParams);
 
-  console.log("Home: initialProperties ==>", initialProperties);
   const hasError = initialProperties.length === 0;
 
   const jsx = (
